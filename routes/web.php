@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/redis', function () {
+    
+    $users = cache()->remember('users', 10, function() {
+        return['ashton'];
+    });
+    
+    dd($users);
+});
+
 
 Auth::routes();
 
