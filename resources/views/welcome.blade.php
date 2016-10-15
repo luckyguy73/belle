@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Belle Moda
                 </div>
 
                 <div class="links">
