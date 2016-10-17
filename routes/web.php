@@ -22,4 +22,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/login/{service}', 'Auth\SocialLoginController@redirect');
 Route::get('/login/{service}/callback', 'Auth\SocialLoginController@callback');
 
+$router->resource('tasks', 'TasksController');
+
 
