@@ -16,7 +16,7 @@
 
 #goog {
     background: #d95032 url('/images/goog-logo.svg') left center no-repeat;
-    background-size: 36px 36px;
+    background-size: 42px 42px;
 }
 
 #twit {
@@ -25,5 +25,18 @@
 }
 
 #soc-buttons {
-    width: 30%;
+    width: 25%;
+    margin-right: 50px;
+    float: right;
+}
+
+@media (max-width:480px){
+
+   #soc-buttons {
+    width: 90%;
+    margin: auto;
+    float: none;
+       
+}
+
 }

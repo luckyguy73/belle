@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -62,11 +62,11 @@
                         </div>
                     </form>
                     </div>
-                    <div id="soc-buttons" class=".col-md-4 btn-group-vertical">
-                       <a id="goog" href="{{ url('/login/google') }}" class="btn btn-default">Log in with Google+</a>
-                       <a id="twit" href="{{ url('/login/twitter') }}" class="btn btn-default">Log in with Twitter</a>
-                       <a id="face" href="{{ url('/login/facebook') }}" class="btn btn-default">Log in with Facebook</a>
-                       <a id="git" href="{{ url('/login/github') }}" class="btn btn-default">Log in with GitHub</a>
+                    <div id="soc-buttons">
+                       <a id="goog" href="{{ url('/login/google') }}" class="btn btn-default btn-block">Log in with Google+</a>
+                       <a id="twit" href="{{ url('/login/twitter') }}" class="btn btn-default btn-block">Log in with Twitter</a>
+                       <a id="face" href="{{ url('/login/facebook') }}" class="btn btn-default btn-block">Log in with Facebook</a>
+                       <a id="git" href="{{ url('/login/github') }}" class="btn btn-default btn-block">Log in with GitHub</a>
                    </div>
                 </div>
             </div>
