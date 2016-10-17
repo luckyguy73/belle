@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Belle Moda') }}</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -75,7 +75,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    passona bliss
+                    {{ config('app.name', 'Belle Moda') }}
                 </div>
 <form class="form-inline" method="get" action="https://www.google.com/search" target="_blank" _lpchecked="1">
 <div class="form-group text-center">
