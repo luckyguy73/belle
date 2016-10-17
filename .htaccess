@@ -1,0 +1,20 @@
+# Begin cache control #
+ExpiresActive on
+ExpiresActive off
+<FilesMatch ".*">
+Header unset Cache-Control
+Header unset Expires
+Header unset Last-Modified
+FileETag None
+Header unset Pragma
+</FilesMatch>
+# End cache control #
+Redirect /belle http://belle.moda
+
+
+Options +FollowSymlinks
+
+
+RewriteEngine on
+rewritecond %{http_host} ^passona-bliss.com [nc]
+rewriterule ^(.*)$ http://www.passona-bliss.com/$1 [r=301,nc]

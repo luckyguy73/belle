@@ -15,11 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/jobs', function () {
-    dispatch(new App\Jobs\LogSomething);
-});
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/login/{service}', 'Auth\SocialLoginController@redirect');
+Route::get('/login/{service}/callback', 'Auth\SocialLoginController@callback');
+
+

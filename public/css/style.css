@@ -1,0 +1,29 @@
+#git, #face, #goog, #twit {
+    color: white;
+    font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+    text-align: left;
+    padding-left: 50px;
+}
+
+#git {
+    background: #666666 url('/images/github-logo.svg') left center no-repeat;
+}
+
+#face {
+    background: #45619d url('/images/face-logo.svg') left center no-repeat;
+    background-size: 36px 36px;
+}
+
+#goog {
+    background: #d95032 url('/images/goog-logo.svg') left center no-repeat;
+    background-size: 36px 36px;
+}
+
+#twit {
+    background: #55ACEE url('/images/twitter-logo.svg') left center no-repeat;
+    background-size: 36px 36px;
+}
+
+#soc-buttons {
+    width: 30%;
+}

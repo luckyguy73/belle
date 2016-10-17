@@ -7,6 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
+                   <div class="col-md-8">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
@@ -60,6 +61,13 @@
                             </div>
                         </div>
                     </form>
+                    </div>
+                    <div id="soc-buttons" class=".col-md-4 btn-group-vertical">
+                       <a id="goog" href="{{ url('/login/google') }}" class="btn btn-default">Log in with Google+</a>
+                       <a id="twit" href="{{ url('/login/twitter') }}" class="btn btn-default">Log in with Twitter</a>
+                       <a id="face" href="{{ url('/login/facebook') }}" class="btn btn-default">Log in with Facebook</a>
+                       <a id="git" href="{{ url('/login/github') }}" class="btn btn-default">Log in with GitHub</a>
+                   </div>
                 </div>
             </div>
         </div>
