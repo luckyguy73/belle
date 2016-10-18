@@ -6,26 +6,31 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Task;
 use Auth;
+use App\User;
+use App\Repositories\TaskRepository;
 
 class TasksController extends Controller
 {
+    protected $user;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(TaskRepository $tasks)
     {
         $this->middleware('auth');
+        $this->tasks = $tasks;
     }
         
-    public function index()
+    public function index(Request $request)
     {
-        $tasks = Task::orderBy('id', 'asc')->get();
+        $tasks = $this->tasks->forUser($request->user());
         $pname = $this->properName(Auth::user()->name);
         
         return view('tasks.index', compact('tasks', 'pname'));
     }
+    
     
     public function properName($string)
     {

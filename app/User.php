@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Task;
 
 class User extends Authenticatable
 {
@@ -32,7 +33,7 @@ class User extends Authenticatable
         return $this->hasMany(UserSocial::class);
     }
     
-    public function task()
+    public function tasks()
     {
         return $this->hasMany(Task::class);
     }

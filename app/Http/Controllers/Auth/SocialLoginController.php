@@ -24,6 +24,7 @@ class SocialLoginController extends Controller
     
     public function callback($service, Request $request)
     {
+        
         $serviceUser = Socialite::driver($service)->user();
         
         $user = $this->getExistingUser($serviceUser, $service);
