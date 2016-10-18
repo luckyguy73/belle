@@ -32,6 +32,11 @@ class User extends Authenticatable
         return $this->hasMany(UserSocial::class);
     }
     
+    public function task()
+    {
+        return $this->hasMany(Task::class);
+    }
+    
     public function hasSocialLinked($service)
     {
         return (bool) $this->social->where('service', $service)->count();

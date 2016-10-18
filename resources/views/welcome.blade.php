@@ -56,7 +56,6 @@
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
-                text-transform: uppercase;
             }
 
             .m-b-md {
@@ -66,10 +65,15 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+           
+            @if (Auth::user())
                 <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
+                    <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
+                </div>
+            @else   
+                <div class="top-right links">
+                    <a href="{{ url('/login') }}">LOGIN</a>
+                    <a href="{{ url('/register') }}">REGISTER</a>
                 </div>
             @endif
 

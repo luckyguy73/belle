@@ -18,6 +18,8 @@
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
 
 
     <!-- Scripts -->
@@ -67,6 +69,13 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
+                                        <a href="{{ url('/home') }}">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('/tasks') }}">Task List</a>
+                                    </li>
+                                       
+                                    <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -90,5 +99,27 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script>
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+    $( ".check" ).click(function() {
+      $( this ).parent().toggleClass( "done" );
+        var item = $(this).parent().attr('id');
+        var as = $(this).parent().attr('class') === 'done' ? 'done' : 'undone';
+        $.ajax({
+          method: "PUT",
+          url: "tasks/" + item,
+          data: { as: as, item: item },   
+        });
+    });
+    </script>    
+    <script>
+        $(document).ready(function(){
+            $("#new-task").focus();
+        });
+    </script>
 </body>
 </html>

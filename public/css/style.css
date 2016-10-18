@@ -39,3 +39,89 @@
 }
 
 }
+
+/*task list*/
+
+.panel-body .items {
+    font: 1em "open sans", sans-serif;
+    color: #363639;
+    padding: 0px;
+}
+
+.check {
+    position: relative;
+    top: 2px;
+}
+
+.delete-task button {
+    border: none;
+    color: white;
+    padding: 3px;
+    overflow: auto;
+}
+
+.list {
+    background: #fff;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0 rgba(0,0,0,.1);
+}
+
+.header {
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.list .header {
+    font-family: "shadows into light two", cursive;
+}
+
+.items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+li:hover .delete-task {
+    opacity: 1;
+    background: rgba(200,0,0,.6);
+    color: white;
+    position: relative;
+    top: -20px;
+}
+
+.items li, .item-add .input {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    padding: 15px 0;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input {
+    width: 100%;
+}
+
+.delete-task {
+    border: 0;
+    opacity: .0;
+    float: right;
+}
+
+.submit {
+    background: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 3px 3px 0 #ddd;
+}
