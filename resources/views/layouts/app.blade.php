@@ -74,6 +74,9 @@
                                     <li>
                                         <a href="{{ url('/tasks') }}">Task List</a>
                                     </li>
+                                    <li>
+                                        <a href="{{ url('weather') }}">Weather</a>
+                                    </li>  
                                        
                                     <li>
                                         <a href="{{ url('/logout') }}"
