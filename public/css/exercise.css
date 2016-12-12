@@ -4,6 +4,14 @@ body {
     overflow: hidden;
 }
 
+a {
+    color: pink;
+}
+
+a:hover {
+    color: white;
+}
+
 .btn-danger {
     display: none;
 }

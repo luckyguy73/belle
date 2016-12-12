@@ -1,14 +1,4 @@
-<?php
-require_once('css/do.php');
-$conn = login();
 
-if(isset($_POST['type'])) {
-  $type = $_POST['type'];
-  $query = ("select * from exercise where type = '$type'");
-  $result = $conn->query($query);
-  $i=1;
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,11 +14,7 @@ if(isset($_POST['type'])) {
 <body>
     <div id='main' class="container-fluid">
         <h1>Workout App</h1>
-        @if(isset($exercises))
-        @foreach($exercises as $exercise)
-        {{ $exercise->type }}
-        @endforeach
-        @endif
+        <p><a href="{{ url('/home') }}">@BelleModa</a></p>
         <form action="" method="post" class="form-inline">
            {{ csrf_field() }}
             <Select NAME="type" class="custom-select">
@@ -62,21 +48,17 @@ if(isset($_POST['type'])) {
         </div>
         <audio id="audiotag1" src="css/fanfare.wav" preload="auto"></audio>
         <div id="routine">
-        <?php 
-            if(isset($result)) {
-              echo <<<HERE
-              <h2>Get Ready to Sweat!</h2>
-              <h4>This app will cycle thru your selected workout routine and signal you when you need to start the next exercise.  Start to get loose, the 1st exercise is coming right up!</h4>
-HERE;
-              echo "<h2>".ucwords($type)."</h2>\n";
-              echo "<button type='button' id='begin' class='btn btn-success'>Begin</button><br>\n";
-              while($row=$result->pg_fetch_assoc()) {
-                  echo "<p id='name".$i."' class='group".$row['group']." for-display ex-name'>".ucwords($row['name'])."</p><br>\n";
-                  echo "<p id='desc".$i."' class='group".$row['group']." for-display ex-desc'>".$row['description']."</p><br>\n";
-                  $i++;
-              }     
-            }
-        ?>
+            @if(isset($exercises))
+                <h2>Get Ready to Sweat!</h2>
+                <h4>This app will cycle thru your selected workout routine and signal you when you need to start the next exercise.  Start to get loose, the 1st exercise is coming right up!</h4>
+                <h2><?= ucwords($type)?></h2>
+                <button type="button" id="begin" class="btn btn-success" >Begin</button><br>
+                @foreach($exercises as $exercise)
+                   <p id="name{{ $loop->iteration }}" class="group{{ $exercise->group }} for-display ex-name">{{ ucwords($exercise->name) }}</p><br>
+                   
+                   <p id="desc{{ $loop->iteration }}" class="group{{ $exercise->group }} for-display ex-desc">{{ ucwords($exercise->description) }}</p><br>
+                @endforeach
+            @endif
         </div>
     </div>    
 <script>

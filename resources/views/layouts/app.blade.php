@@ -77,6 +77,10 @@
                                     <li>
                                         <a href="{{ url('weather') }}">Weather</a>
                                     </li>  
+                                    
+                                    <li>
+                                        <a href="{{ url('exercise') }}">Workout App</a>
+                                    </li>    
                                        
                                     <li>
                                         <a href="{{ url('/logout') }}"

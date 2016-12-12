@@ -17,8 +17,8 @@ class ExercisesController extends Controller
     public function index(Request $request)
     {
         $type = $request['type'];
-        $exercises = DB::table('exercises')->where('type', '=', $type);
+        $exercises = DB::table('exercises')->where('type', '=', $type)->get();
         
-        return view('exercise',compact('exercises'));
+        return view('exercise',compact('exercises', 'type'));
     }
 }
