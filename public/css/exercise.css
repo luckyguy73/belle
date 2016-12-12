@@ -1,0 +1,101 @@
+body {
+    background: #012f61;
+    color: white;
+    overflow: hidden;
+}
+
+.btn-danger {
+    display: none;
+}
+
+#main, .modal-footer {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+.custom-select {
+    color: black;
+}
+
+#routine p {
+    display: none;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 5px;
+    background-color: #012f61;
+    color: white;
+    padding-left: 16px;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+    color: black;
+}
+
+/* Modal Body */
+.modal-footer {
+    padding: 2px 16px;
+    color: white;
+    background: #012f61;
+    padding-bottom: 10px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    min-height: 30%;
+    min-width: 30%; /* Could be more or less, depending on screen size */
+    max-width: 95%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Mobile Phone Font Size */
+
+@media (max-width:350px) {
+    #description {
+        font-size: 18px;
+    }
+    .btn-primary {
+        padding: 10px;
+        margin: 0;
+        border: 0;
+    }
+    .modal, .modal-content {
+        overflow: auto;
+    }
+  
+}

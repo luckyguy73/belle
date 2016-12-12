@@ -19,6 +19,10 @@ Route::get('/weather', function () {
     return view('weather');
 });
 
+Route::get('/workout', function () {
+    return view('exercise');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
