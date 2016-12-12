@@ -24,6 +24,9 @@ if(isset($_POST['type'])) {
 <body>
     <div id='main' class="container-fluid">
         <h1>Workout App</h1>
+        @foreach($exercises as $exercise)
+        {{ $exercise->type }}
+        @endforeach
         <form action="" method="post" class="form-inline">
            {{ csrf_field() }}
             <Select NAME="type" class="custom-select">

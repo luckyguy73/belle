@@ -19,7 +19,9 @@ Route::get('/weather', function () {
     return view('weather');
 });
 
-Route::any('/workout', function () {
+Route::post('/exercise', 'ExercisesController@index');
+
+Route::get('/exercise', function () {
     return view('exercise');
 });
 
