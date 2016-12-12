@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{{ config('app.name', 'Belle Moda') }}</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -12,6 +12,11 @@
 
         <!-- Styles -->
         <style>
+            @media (max-width:350px) {
+                html, body {
+                    overflow: auto;
+                }
+            }
             html, body {
                 background-color: #fff;
                 color: #636b6f;
