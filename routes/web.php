@@ -19,7 +19,7 @@ Route::get('/weather', function () {
     return view('weather');
 });
 
-Route::get('/workout', function () {
+Route::any('/workout', function () {
     return view('exercise');
 });
 

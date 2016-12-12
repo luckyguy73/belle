@@ -25,6 +25,7 @@ if(isset($_POST['type'])) {
     <div id='main' class="container-fluid">
         <h1>Workout App</h1>
         <form action="" method="post" class="form-inline">
+           {{ csrf_field() }}
             <Select NAME="type" class="custom-select">
                 <Option selected disabled>Choose routine</Option>
                 <Option VALUE="cardio">Cardio</Option>
