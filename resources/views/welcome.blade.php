@@ -7,16 +7,12 @@
 
         <title>{{ config('app.name', 'Belle Moda') }}</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
-            @media (max-width:350px) {
-                html, body {
-                    overflow: auto;
-                }
-            }
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -24,7 +20,6 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
-                overflow: auto;
             }
 
             .full-height {
@@ -32,9 +27,12 @@
             }
 
             .flex-center {
-                align-items: center;
-                display: flex;
+                align-content: flex-start;
+                /*align-items: center;*/
+                display: block;
+                margin: auto;
                 justify-content: center;
+                
             }
 
             .position-ref {
@@ -49,10 +47,12 @@
 
             .content {
                 text-align: center;
+                margin: 20% 0 0 0;
             }
 
             .title {
                 font-size: 84px;
+                overflow: auto;
             }
 
             .links > a {
@@ -67,10 +67,14 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            
+            .btn-info {
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="container-fluid full-height">
            
             @if (Auth::user())
                 <div class="top-right links">
