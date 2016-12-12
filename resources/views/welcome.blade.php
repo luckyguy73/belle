@@ -19,6 +19,7 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                overflow: auto;
             }
 
             .full-height {
