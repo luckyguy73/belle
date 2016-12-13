@@ -23,6 +23,8 @@
                 margin: 0;
                 opacity: 0.7;
                 overflow: hidden;
+                display: block;
+                box-sizing: border-box;
             }
 
             .full-height {
@@ -81,8 +83,9 @@
                 z-index: -1;
                 top: 0;
                 left: 0;
-                min-width: 100%;
-                min-height: 100%;
+                min-width: 100vw;
+                min-height: 100vh;
+                overflow: hidden;
             }
             
             .search-field::-webkit-input-placeholder {
