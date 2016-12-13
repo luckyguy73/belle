@@ -27,23 +27,6 @@
                 box-sizing: border-box;
             }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-content: flex-start;
-                /*align-items: center;*/
-                display: block;
-                margin: auto;
-                justify-content: center;
-                
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
             .top-right {
                 position: absolute;
                 right: 10px;
@@ -71,7 +54,7 @@
             }
 
             .m-b-md {
-                margin-bottom: 50px;
+                margin-bottom: 30px;
             }
             
             .btn-info {
@@ -115,9 +98,9 @@
             <div class="content">
                 <div class="section">
                     <!-- Video Background -->
-                    <div class="home-view page" style="opacity: 1;">
+                    <div class="home-view page">
                         <div class="content">
-                           <div class="inner" style="-webkit-filter: none; transform: translateX(0px) translateY(0px);"></div>
+                           <div class="inner"></div>
                         </div>
                         @if (rand(1,5) === 1)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/053/original/Beatiful_rocks_in_the_beach.mp4" class="" style="opacity: .7;"></video>
@@ -136,7 +119,7 @@
                         @endif    
                     </div>
                 </div>
-                <div class="title">
+                <div class="title .m-b-md">
                     {{ config('app.name', 'Belle Moda') }}
                 </div>
                 <form class="form-inline" method="get" action="https://www.google.com/search" 
