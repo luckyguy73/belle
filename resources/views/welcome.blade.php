@@ -19,6 +19,7 @@
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
+                width: 100vw;
                 margin: 0;
                 opacity: 0.7;
                 overflow: hidden;
@@ -95,7 +96,7 @@
         </style>
     </head>
     <body>
-        <div class="container-fluid full-height">
+        <div class="container-fluid">
            
             @if (Auth::user())
                 <div class="top-right links">
@@ -132,7 +133,7 @@
                         @endif    
                     </div>
                 </div>
-                <div class="title m-b-md">
+                <div class="title">
                     {{ config('app.name', 'Belle Moda') }}
                 </div>
                 <form class="form-inline" method="get" action="https://www.google.com/search" 
