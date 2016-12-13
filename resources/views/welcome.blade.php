@@ -15,11 +15,13 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                color: #111;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                opacity: 0.7;
+                overflow: hidden;
             }
 
             .full-height {
@@ -53,10 +55,11 @@
             .title {
                 font-size: 84px;
                 overflow: auto;
+                color: #111;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #111;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -65,12 +68,30 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 50px;
             }
             
             .btn-info {
                 font-weight: bold;
             }
+            
+            .home-view video {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                min-height: 100%;
+            }
+            
+            .search-field::-webkit-input-placeholder {
+                color: #aaa;
+                font-weight: bold;
+            }
+            input:focus::-webkit-input-placeholder { color:transparent; }
+            input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+            input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+            input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         </style>
     </head>
     <body>
@@ -88,17 +109,40 @@
             @endif
 
             <div class="content">
+                <div class="section">
+                    <!-- Video Background -->
+                    <div class="home-view page" style="opacity: 1;">
+                        <div class="content">
+                           <div class="inner" style="-webkit-filter: none; transform: translateX(0px) translateY(0px);"></div>
+                        </div>
+                        @if (rand(1,5) === 1)
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/053/original/Beatiful_rocks_in_the_beach.mp4" class="" style="opacity: .7;"></video>
+                        
+                        @elseif (rand(1,5) === 2)
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/002/302/original/storm-clouds-timelapse.mp4" class="" style="opacity: .7;"></video>
+                        
+                        @elseif (rand(1,5) === 3)
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/000/212/original/Beach%20rocks%20at%20dusk%20[SaveYouTube.com].mp4" class="" style="opacity: .7;"></video>
+                        
+                        @elseif (rand(1,5) === 4)
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/002/725/original/clouds-over-field.mp4" class="" style="opacity: .7;"></video>
+                        
+                        @else
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/052/original/Beach_Rocks___Blue_Ocean.mp4" class="" style="opacity: .7;"></video>    
+                        @endif    
+                    </div>
+                </div>
                 <div class="title m-b-md">
                     {{ config('app.name', 'Belle Moda') }}
                 </div>
-<form class="form-inline" method="get" action="https://www.google.com/search" target="_blank" _lpchecked="1">
-<div class="form-group text-center">
-  <input type="reset" class="btn btn-info" name="reset" value="Clear" tabindex="1">
-  <input class="form-control" name="q" type="text" size="80" placeholder="search google">
-  <input type="submit" class="btn btn-info" name="submit" value="Search" tabindex="0">
-
-</div></form>
-               
+                <form class="form-inline" method="get" action="https://www.google.com/search" 
+                   target="_blank" _lpchecked="1">
+                    <div class="form-group text-center">
+                      <input type="reset" class="btn btn-info" name="reset" value="Clear" tabindex="1">
+                      <input class="form-control search-field" name="q" type="text" size="80" placeholder="search google">
+                      <input type="submit" class="btn btn-info" name="submit" value="Search" tabindex="0">
+                    </div>
+                </form>
             </div>
         </div>
     </body>
