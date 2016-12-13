@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{{ config('app.name', 'Belle Moda') }}</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -66,10 +66,8 @@
                 z-index: -1;
                 top: 0;
                 left: 0;
-                min-width: 100vw;
-                min-height: 100vh;
-                max-width: 100vw;
-                max-height: 100vh;
+                min-width: 100%;
+                min-height: 100%;
                 overflow: hidden;
             }
             
@@ -81,6 +79,12 @@
             input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
             input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
             input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+            
+            @media screen and (max-width:580px) {
+                video {
+                    display: none;
+                }
+            }
         </style>
     </head>
     <body>
