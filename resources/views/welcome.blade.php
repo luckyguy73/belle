@@ -108,16 +108,17 @@
                         <div class="content">
                            <div class="inner"></div>
                         </div>
-                        @if (rand(1,5) === 1)
+                        <?php $rand = mt_rand(1,5); ?>
+                        @if ($rand === 1)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/053/original/Beatiful_rocks_in_the_beach.mp4" class="" style="opacity: .7;"></video>
                         
-                        @elseif (rand(1,5) === 2)
+                        @elseif ($rand === 2)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/002/302/original/storm-clouds-timelapse.mp4" class="" style="opacity: .7;"></video>
                         
-                        @elseif (rand(1,5) === 3)
+                        @elseif ($rand === 3)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/000/212/original/Beach%20rocks%20at%20dusk%20[SaveYouTube.com].mp4" class="" style="opacity: .7;"></video>
                         
-                        @elseif (rand(1,5) === 4)
+                        @elseif ($rand === 4)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/002/725/original/clouds-over-field.mp4" class="" style="opacity: .7;"></video>
                         
                         @else
