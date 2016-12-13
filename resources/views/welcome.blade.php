@@ -66,8 +66,10 @@
                 z-index: -1;
                 top: 0;
                 left: 0;
-                min-width: 100%;
-                min-height: 100%;
+                min-width: 100vw;
+                min-height: 100vh;
+                max-width: 100vw;
+                max-height: 100vh;
                 overflow: hidden;
             }
             
