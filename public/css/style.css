@@ -33,11 +33,10 @@
 /* dashboard styles */
 
 #dash {
-    font-size: 1.75rem;
+    font-size: 2rem;
 }
 #dash, #dash span, #dash li a {
-    color: rgb(10,10,138);
-    font-family: Montserrat, Lato, Tahoma;
+    color: #777;
 }
 
 #dash li a:hover {
@@ -46,9 +45,13 @@
 .dashboard-links {
     text-align: center;
     display: none;
+    border-bottom: 1px solid transparent;
+    border-color: #d3e0e9;
+    padding: 0 15px 15px 15px;
 }
 #apps {
-    font-size: 2.25rem;
+    font-size: 2rem;
+    margin-top: 26px;
 }
 
 #apps img {

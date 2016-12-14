@@ -16,11 +16,10 @@
                         <a href="https://www.tumblr.com/" title="tumblr" target="_blank"><img src="images/tumblr.png" width="36" height="36" alt="tumblr"></a>
                         <a href="https://www.instagram.com" title="instagram" target="_blank"><img src="images/instagram.png" width="36" height="36" alt="instagram"></a>                        
                         <a href="https://www.linkedin.com/" title="linkedin" target="_blank"><img src="images/linkedin.png" width="36" height="36" alt="linkedin"></a>
-                        <a href="https://www.pinterest.com/" title="pinterest" target="_blank"><img src="images/pinterest.png" width="36" height="36" alt="pinterest"></a>
+                        <a href="https://www.pinterest.com/" title="pinterest" target="_blank"><img src="images/pinterest.png" width="36" height="36" alt="pinterest"></a>                        
                     </div>
                     <div id="apps">
-                        
-                        <ul>Apps
+                        <ul>
                             <li><a href="{{ url('/tasks') }}">Task List <img src="images/task list.png" width="26" height="26" alt="task list"></a></li>
                             <li><a href="{{ url('weather') }}">Weather <img src="images/weathericon.png" width="28" height="28" alt="weather"></a></li>
                             <li><a href="{{ url('exercise') }}">Workout <img src="images/exercise icon.png" width="30" height="30" alt="exercise"></a></li>
