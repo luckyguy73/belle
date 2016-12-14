@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 
     <!-- Scripts -->
@@ -70,18 +71,8 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                         <a href="{{ url('/home') }}">Dashboard</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ url('/tasks') }}">Task List</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ url('weather') }}">Weather</a>
-                                    </li>  
-                                    
-                                    <li>
-                                        <a href="{{ url('exercise') }}">Workout App</a>
-                                    </li>    
-                                       
+                                    </li> 
+                                           
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
@@ -127,6 +118,11 @@
         $(document).ready(function(){
             $("#new-task").focus();
         });
+    </script>
+    <script>
+    $( "#lynx" ).click(function() {
+      $( ".dashboard-links" ).toggle();
+    });
     </script>
 </body>
 </html>

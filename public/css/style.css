@@ -30,14 +30,47 @@
     float: right;
 }
 
-@media (max-width:480px){
+/* dashboard styles */
 
-   #soc-buttons {
+#dash {
+    font-size: 1.75rem;
+}
+#dash, #dash span, #dash li a {
+    color: rgb(10,10,138);
+    font-family: Montserrat, Lato, Tahoma;
+}
+
+#dash li a:hover {
+    color: dodgerblue;
+}
+.dashboard-links {
+    text-align: center;
+    display: none;
+}
+#apps {
+    font-size: 2.25rem;
+}
+
+#apps img {
+    position: relative;
+    top: -3px;
+    left: 2px;
+}
+#lynx {
+    float: right;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+}
+@media screen and (max-width:480px){
+    #soc-buttons {
     width: 90%;
     margin: auto;
     float: none;
-}
-
+    }
+    .dashboard-links img {
+    padding-bottom: 2px;
+    }
 }
 
 /*task list*/
