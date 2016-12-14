@@ -48,6 +48,7 @@
     border-bottom: 1px solid transparent;
     border-color: #d3e0e9;
     padding: 0 15px 15px 15px;
+    margin: 0 -15px;
 }
 #apps {
     font-size: 2rem;
