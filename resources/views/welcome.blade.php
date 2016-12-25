@@ -56,11 +56,11 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-            
+
             .btn-info {
                 font-weight: bold;
             }
-            
+
             .home-view video {
                 position: absolute;
                 z-index: -1;
@@ -70,7 +70,7 @@
                 min-height: 100%;
                 overflow: hidden;
             }
-            
+
             .search-field::-webkit-input-placeholder {
                 color: #aaa;
                 font-weight: bold;
@@ -79,22 +79,26 @@
             input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
             input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
             input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
-            
+
             @media screen and (max-width:580px) {
                 video {
                     display: none;
                 }
             }
+            .form-control {
+                color: black;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
         <div class="container-fluid">
-           
+
             @if (Auth::user())
                 <div class="top-right links">
                     <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
                 </div>
-            @else   
+            @else
                 <div class="top-right links">
                     <a href="{{ url('/login') }}">LOGIN</a>
                     <a href="{{ url('/register') }}">REGISTER</a>
@@ -111,25 +115,25 @@
                         <?php $rand = mt_rand(1,5); ?>
                         @if ($rand === 1)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/053/original/Beatiful_rocks_in_the_beach.mp4" class="" style="opacity: .7;"></video>
-                        
+
                         @elseif ($rand === 2)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/002/302/original/storm-clouds-timelapse.mp4" class="" style="opacity: .7;"></video>
-                        
+
                         @elseif ($rand === 3)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/000/212/original/Beach%20rocks%20at%20dusk%20[SaveYouTube.com].mp4" class="" style="opacity: .7;"></video>
-                        
+
                         @elseif ($rand === 4)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/002/725/original/clouds-over-field.mp4" class="" style="opacity: .7;"></video>
-                        
+
                         @else
-                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/052/original/Beach_Rocks___Blue_Ocean.mp4" class="" style="opacity: .7;"></video>    
-                        @endif    
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/052/original/Beach_Rocks___Blue_Ocean.mp4" class="" style="opacity: .7;"></video>
+                        @endif
                     </div>
                 </div>
                 <div class="title .m-b-md">
                     {{ config('app.name', 'Belle Moda') }}
                 </div>
-                <form class="form-inline" method="get" action="https://www.google.com/search" 
+                <form class="form-inline" method="get" action="https://www.google.com/search"
                    target="_blank" _lpchecked="1">
                     <div class="form-group text-center">
                       <input type="reset" class="btn btn-info" name="reset" value="Clear" tabindex="1">
