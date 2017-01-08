@@ -14,7 +14,7 @@
                         <a href="https://www.github.com/" title="github" target="_blank"><img src="images/github.png" width="36" height="36" alt="github"></a>
                         <a href="https://www.youtube.com" title="youtube" target="_blank"><img src="images/youtube.png" width="36" height="36" alt="youtube"></a>
                         <a href="https://www.tumblr.com/" title="tumblr" target="_blank"><img src="images/tumblr.png" width="36" height="36" alt="tumblr"></a>
-                        <a href="https://www.instagram.com" title="instagram" target="_blank"><img src="images/instagram.png" width="36" height="36" alt="instagram"></a>                        
+                        <a href="https://www.instagram.com" title="instagram" target="_blank"><img src="images/instagram.png" width="36" height="36" alt="instagram"></a>
                         <a href="https://www.linkedin.com/" title="linkedin" target="_blank"><img src="images/linkedin.png" width="36" height="36" alt="linkedin"></a>
                         <a href="https://www.pinterest.com/" title="pinterest" target="_blank"><img src="images/pinterest.png" width="36" height="36" alt="pinterest"></a>                        
                     </div>

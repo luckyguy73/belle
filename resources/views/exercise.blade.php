@@ -39,7 +39,7 @@
                 <div class="modal-footer">
                     <h4 id="timer">&nbsp;</h4>
                     <button id="back" class="btn btn-primary">Back</button>
-                    <button id="resume" class="btn btn-primary">Resume</button>
+<!--                    <button id="resume" class="btn btn-primary">Resume</button>-->
                     <button id="pause" class="btn btn-primary">Pause</button>
                     <button id="skip" class="btn btn-primary">Skip</button>
                     <button id="exit" class="btn btn-danger">Exit</button>
@@ -99,17 +99,20 @@ $(function() {
     
     $('#pause').on('click', function(e) {
         e.preventDefault();
-        isPaused = true;
+        $(this).text(function(i, text){
+          isPaused === true ? isPaused = false : isPaused = true;  
+          return text === "Pause" ? "Resume" : "Pause";
+        })
     });  //end of pause click function
 
-    $('#resume').on('click', function(e) {
-        e.preventDefault();
-        isPaused = false;
-    });  //end of resume click function
+//    $('#resume').on('click', function(e) {
+//        e.preventDefault();
+//        isPaused = false;
+//    });  //end of resume click function
     
     $('#skip').on('click', function(e) {
         e.preventDefault();
-        if(excCounter == excTotal / 2){
+        if(excCounter === excTotal / 2){
             time = 1;
         } else {
             nextExercise();
@@ -118,7 +121,7 @@ $(function() {
     
     $('#back').on('click', function(e) {
         e.preventDefault();
-        if(excCounter != 1) {
+        if(excCounter !== 1) {
             prevExercise();
         }
     });  //end of back click function
@@ -130,12 +133,12 @@ $(function() {
     
     function startTimer() {
         var t = window.setInterval(function() {
-            if((time == 0) && (excCounter == excTotal / 2)) {
+            if((time === 0) && (excCounter === excTotal / 2)) {
                 finished();
                 clearInterval(t);
                 output.text("You may now exit");
             }
-            if(time == 0) {
+            if(time === 0) {
                 nextExercise();
             }
             if(!isPaused) {
