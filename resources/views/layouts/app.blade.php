@@ -15,8 +15,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ elixir('css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
@@ -97,7 +97,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="{{ elixir('js/app.js') }}"></script>
     @yield('scripts')
     <script>
     $.ajaxSetup({

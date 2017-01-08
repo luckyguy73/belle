@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.55">
     <title>Get Weather</title>
-    <link rel="stylesheet" href="css/getweather.css" type="text/css">
+    <link rel="stylesheet" href="{{ elixir('css/getweather.css') }}" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="js/getweather.js"></script>
+    <script src="{{ elixir('js/getweather.js') }}"></script>
     
 </head>
 <body>

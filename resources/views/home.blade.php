@@ -5,7 +5,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div id="dash" class="panel panel-default">
-                <div class="panel-heading"><span>{{ ucfirst(strtolower(substr(Auth::user()->name, 0, strpos(Auth::user()->name, ' ')))) }}'s Dashboard</span><span id="lynx"><img src="images/links.png" width="28" height="28" alt="links"></span></div>
+                <div class="panel-heading">
+                    <span>{{ ucfirst(strtolower(substr(Auth::user()->name, 0, strpos(Auth::user()->name, ' ')))) }}'s Dashboard</span>
+                    <span id="lynx"><img src="images/links.png" width="28" height="28" alt="links"></span>
+                </div>
                 <div class="panel-body">
                    <div class="dashboard-links">
                         <a href="https://plus.google.com/" title="google+" target="_blank"><img src="images/google.png" width="36" height="36" alt="google plus"></a>
@@ -20,9 +23,9 @@
                     </div>
                     <div id="apps">
                         <ul>
-                            <li><a href="{{ url('/tasks') }}">Task List <img src="images/task list.png" width="26" height="26" alt="task list"></a></li>
-                            <li><a href="{{ url('weather') }}">Weather <img src="images/weathericon.png" width="28" height="28" alt="weather"></a></li>
-                            <li><a href="{{ url('exercise') }}">Workout <img src="images/exercise icon.png" width="30" height="30" alt="exercise"></a></li>
+                            <li><img src="images/task list.png" width="28" height="28" alt="task list"><a href="{{ url('/tasks') }}">Task List</a></li>
+                            <li><img src="images/weathericon.png" width="28" height="28" alt="weather"><a href="{{ url('weather') }}">Weather</a></li>
+                            <li><img src="images/exercise icon.png" width="28" height="28" alt="exercise"><a href="{{ url('exercise') }}">Workout</a></li>
                         </ul>
                     </div>
                 </div>

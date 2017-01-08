@@ -15,5 +15,13 @@ require('laravel-elixir-vue-2');
 
 elixir(mix => {
     mix.sass('app.scss')
+       .version([
+       'css/app.css',
+       'css/exercise.css',
+       'css/getweather.css',
+       'css/style.css',
+       'js/app.js',
+       'js/getweather.js'
+       ])
        .webpack('app.js');
 });
