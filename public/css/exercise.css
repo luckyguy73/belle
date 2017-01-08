@@ -1,8 +1,22 @@
 /* WTF takes so long for heroku to update */
 
 body {
-    background: #012f61;
-    color: white;
+    background: #9fa8a3;
+    color: black;
+    font-family: montserrat;
+}
+.panel-header {
+    color: black;
+}
+
+.btn-success {
+    background: dodgerblue;
+}
+.btn-success:hover, .btn-success:active, .btn-success:active:focus {
+    background: midnightblue;
+}
+.control-flow {
+    height: 10px;
     overflow: hidden;
 }
 
@@ -25,6 +39,9 @@ a:hover {
 }
 .custom-select {
     color: black;
+    font-size: 17px;
+    display: inline-block;
+    line-height: 1.4;
 }
 
 #routine p {
@@ -34,8 +51,8 @@ a:hover {
 /* Modal Header */
 .modal-header {
     padding: 2px 5px;
-    background-color: #012f61;
-    color: white;
+    background-color: #c5d5cb;
+    color: black;
     padding-left: 16px;
 }
 
@@ -48,8 +65,8 @@ a:hover {
 /* Modal Body */
 .modal-footer {
     padding: 2px 16px;
-    color: white;
-    background: #012f61;
+    color: black;
+    background: #c5d5cb;
     padding-bottom: 10px;
 }
 
@@ -80,7 +97,7 @@ a:hover {
 
 /* The Close Button */
 .close {
-    color: #aaa;
+    color: #333;
     float: right;
     font-size: 28px;
     font-weight: bold;

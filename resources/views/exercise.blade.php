@@ -1,31 +1,27 @@
+@extends('layouts.app')
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout App</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+@section('styles')
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/exercise.css">
-</head>
-<body>
+@stop
+
+@section('content')
     <div id='main' class="container-fluid">
-        <h1>Workout App</h1>
-        <p><a href="{{ url('/home') }}">@BelleModa</a></p>
-        <form action="" method="post" class="form-inline">
-           {{ csrf_field() }}
-            <Select NAME="type" class="custom-select">
-                <Option selected disabled>Choose routine</Option>
-                <Option VALUE="cardio">Cardio</Option>
-                <Option VALUE="circuit">Circuit</Option>
-                <Option VALUE="abs">Abs</Option>
-                <Option VALUE="stretch">Stretch</Option>
-            </Select>
-            <input type="submit" class="btn btn-success">
-        </form>
+        <div class="col-md-6 col-md-offset-3 panel panel-heading">
+            <h1 class="panel-header">Workout App</h1>
+            <form action="" method="post" class="form-inline panel-body">
+               {{ csrf_field() }}
+                <Select NAME="type" class="custom-select">
+                    <Option selected disabled>Choose routine</Option>
+                    <Option VALUE="cardio">Cardio</Option>
+                    <Option VALUE="circuit">Circuit</Option>
+                    <Option VALUE="abs">Abs</Option>
+                    <Option VALUE="stretch">Stretch</Option>
+                </Select>
+                <input type="submit" class="btn btn-success">
+            </form>
+        </div>
         <div class="modal" id="myModal">
             <!-- Modal content -->
             <div class="modal-content">
@@ -49,18 +45,28 @@
         <audio id="audiotag1" src="css/fanfare.wav" preload="auto"></audio>
         <div id="routine">
             @if(isset($exercises))
-                <h2>Get Ready to Sweat!</h2>
-                <h4>This app will cycle thru your selected workout routine and signal you when you need to start the next exercise.  Start to get loose, the 1st exercise is coming right up!</h4>
-                <h2><?= ucwords($type)?></h2>
-                <button type="button" id="begin" class="btn btn-success" >Begin</button><br>
+                <div class="col-md-6 col-md-offset-3 panel panel-default">
+                        <div class="panel-body">
+                        <h2>Get Ready to Sweat!</h2>
+                        <h4>This app will cycle thru your selected workout routine and signal you when you need to start the next exercise.  Start to get loose, the 1st exercise is coming right up!</h4>
+                        <h2><?= ucwords($type)?></h2>
+                        <button type="button" id="begin" class="btn btn-success" >Begin</button><br>
+                    </div>
+                </div>
                 @foreach($exercises as $exercise)
+                <div class="control-flow">
                    <p id="name{{ $loop->iteration }}" class="group{{ $exercise->group }} for-display ex-name">{{ ucwords($exercise->name) }}</p><br>
                    
                    <p id="desc{{ $loop->iteration }}" class="group{{ $exercise->group }} for-display ex-desc">{{ ucwords($exercise->description) }}</p><br>
+                </div>   
                 @endforeach
             @endif
         </div>
     </div>    
+@stop
+@section('scripts')
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script>
 $(function() {
     //declare variables
@@ -183,7 +189,7 @@ $(function() {
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             time = 0;
             excCounter = excTotal / 2;
         }
@@ -192,5 +198,5 @@ $(function() {
 }); //end of ready function   
     
 </script>
-</body>
-</html>		
+@stop
+	
