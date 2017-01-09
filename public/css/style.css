@@ -1,3 +1,7 @@
+body {
+    background: #9fa8a3;
+    font-family: montserrat;
+}
 
 #git, #face, #goog, #twit {
     color: white;
