@@ -34,7 +34,12 @@ class TasksController extends Controller
     
     public function properName($string)
     {
-        return ucfirst(strtolower(substr($string, 0, strpos($string, ' '))));
+        if(strpos($string, ' ')) {
+            return ucfirst(strtolower(substr($string, 0, strpos($string, ' '))));
+        } else {
+            return ucfirst($string);
+        }
+        
     }
     
     public function store(Request $request)

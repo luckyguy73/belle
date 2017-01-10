@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div id="dash" class="panel panel-default">
                 <div class="panel-heading">
-                    <span>{{ ucfirst(strtolower(substr(Auth::user()->name, 0, strpos(Auth::user()->name, ' ')))) }}'s Dashboard</span>
+                    <span>{{ $pname }}'s Dashboard</span>
                     <span id="lynx"><img src="images/links.png" width="28" height="28" alt="links"></span>
                 </div>
                 <div class="panel-body">

@@ -96,7 +96,7 @@
 
             @if (Auth::user())
                 <div class="top-right links">
-                    <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
+                    <a href="{{ url('/home') }}">{{ ucwords(Auth::user()->name) }}</a>
                 </div>
             @else
                 <div class="top-right links">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $pname = $this->properName(Auth::user()->name);
+        return view('home', compact('pname'));
+    }
+    
+    public function properName($string)
+    {
+        if(strpos($string, ' ')) {
+            return ucfirst(strtolower(substr($string, 0, strpos($string, ' '))));
+        } else {
+            return ucfirst($string);
+        }
+        
     }
 }
