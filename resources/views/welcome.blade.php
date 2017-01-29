@@ -112,7 +112,7 @@
                         <div class="content">
                            <div class="inner"></div>
                         </div>
-                        <?php $rand = mt_rand(1,5); ?>
+                        <?php $rand = mt_rand(1,12); ?>
                         @if ($rand === 1)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/053/original/Beatiful_rocks_in_the_beach.mp4" class="" style="opacity: .7;"></video>
 
@@ -125,8 +125,23 @@
                         @elseif ($rand === 4)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/002/725/original/clouds-over-field.mp4" class="" style="opacity: .7;"></video>
 
-                        @else
+                        @elseif ($rand === 5)
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/927/original/Snowflakes_Falling_Motion_Background_4K.mp4" class="" style="opacity: .7;"></video>
+                        
+                        @elseif ($rand === 6)
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/956/original/Sunray_Clouds_4K_Living_Background.mp4" class="" style="opacity: .7;"></video>
+                        
+                        @elseif ($rand === 7)
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/005/030/original/Silk_4K_Wedding_Background.mp4" class="" style="opacity: .7;"></video>
+                        
+                        @elseif ($rand === 8)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/052/original/Beach_Rocks___Blue_Ocean.mp4" class="" style="opacity: .7;"></video>
+                        
+                        @elseif ($rand === 9)
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/003/303/original/Flying_over_Snow_Covered_Mountains_Free_HD_Video.mp4" class="" style="opacity: .7;"></video>
+                        
+                        @else
+                        <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/002/403/original/storm-raindrops-on-window.mp4" class="" style="opacity: .7;"></video>
                         @endif
                     </div>
                 </div>
