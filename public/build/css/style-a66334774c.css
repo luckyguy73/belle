@@ -3,6 +3,13 @@ body {
     font-family: montserrat;
 }
 
+#weather-id, #mcweather {
+    color: #636b6f;
+    font-family: montserrat;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
 #git, #face, #goog, #twit {
     color: white;
     font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
