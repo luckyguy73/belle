@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+   
         <!-- Styles -->
         <style>
             html, body {
@@ -21,7 +21,7 @@
                 height: 100vh;
                 width: 100vw;
                 margin: 0;
-                opacity: 0.7;
+                opacity: 0.9;
                 overflow: hidden;
                 display: block;
                 box-sizing: border-box;
@@ -106,12 +106,9 @@
             @endif
 
             <div class="content">
-                <div class="section">
                     <!-- Video Background -->
                     <div class="home-view page">
-                        <div class="content">
-                           <div class="inner"></div>
-                        </div>
+                        
                         <?php $rand = mt_rand(1,12); ?>
                         @if ($rand === 1)
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/004/053/original/Beatiful_rocks_in_the_beach.mp4" class="" style="opacity: .7;"></video>
@@ -144,7 +141,6 @@
                         <video muted autoplay="" loop="" src="https://static.videezy.com/system/resources/previews/000/002/403/original/storm-raindrops-on-window.mp4" class="" style="opacity: .7;"></video>
                         @endif
                     </div>
-                </div>
                 <div class="title .m-b-md">
                     {{ config('app.name', 'Belle Moda') }}
                 </div>
