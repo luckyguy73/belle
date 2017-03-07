@@ -14,13 +14,15 @@
 
                 <div class="panel-body">
                     {!! nl2br(e($blog->body)) !!}
-                    @if(Auth::user()->id === $blog->user_id)
-                        <hr>
-                        <p>
-                            <a class="btn btn-success" href="{{ route('blogs.edit', [$blog]) }}" role="button">Edit Blog</a>
-                            <a href="#" onclick="event.preventDefault(); document.getElementById('delete-blog-{{ $blog->id }}').submit();"
-                                class="btn btn-danger" role="button">Delete Blog</a>
-                        </p>
+                    @if(Auth::check())
+                        @if(Auth::user()->id === $blog->user_id)
+                            <hr>
+                            <p>
+                                <a class="btn btn-success" href="{{ route('blogs.edit', [$blog]) }}" role="button">Edit Blog</a>
+                                <a href="#" onclick="event.preventDefault(); document.getElementById('delete-blog-{{ $blog->id }}').submit();"
+                                    class="btn btn-danger" role="button">Delete Blog</a>
+                            </p>
+                        @endif
                     @endif
                 </div>
             </div>
