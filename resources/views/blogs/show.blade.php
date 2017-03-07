@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="panel-body">
-                    {{ $blog->body }}
+                    {!! nl2br(e($blog->body)) !!}
                     @if(Auth::user()->id === $blog->user_id)
                         <hr>
                         <p>
