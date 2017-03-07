@@ -5,6 +5,11 @@ body {
     color: black;
     font-family: montserrat;
 }
+
+.breadcrumb {
+    background: #fff;
+}
+
 .panel-header {
     color: black;
 }
@@ -18,14 +23,6 @@ body {
 .control-flow {
     height: 10px;
     overflow: hidden;
-}
-
-a {
-    color: pink;
-}
-
-a:hover {
-    color: white;
 }
 
 .btn-danger {
@@ -124,5 +121,5 @@ a:hover {
     .modal, .modal-content {
         overflow: auto;
     }
-  
+
 }

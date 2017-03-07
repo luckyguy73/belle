@@ -19,10 +19,11 @@
                         <a href="https://www.tumblr.com/" title="tumblr" target="_blank"><img src="images/tumblr.png" width="36" height="36" alt="tumblr"></a>
                         <a href="https://www.instagram.com" title="instagram" target="_blank"><img src="images/instagram.png" width="36" height="36" alt="instagram"></a>
                         <a href="https://www.linkedin.com/" title="linkedin" target="_blank"><img src="images/linkedin.png" width="36" height="36" alt="linkedin"></a>
-                        <a href="https://www.pinterest.com/" title="pinterest" target="_blank"><img src="images/pinterest.png" width="36" height="36" alt="pinterest"></a>                        
+                        <a href="https://www.pinterest.com/" title="pinterest" target="_blank"><img src="images/pinterest.png" width="36" height="36" alt="pinterest"></a>
                     </div>
                     <div id="apps">
                         <ul>
+                            <li><img src="images/blog.jpg" width="28" height="28" alt="task list"><a href="{{ route('blogs.index') }}">Blog Posts</a></li>
                             <li><img src="images/task list.png" width="28" height="28" alt="task list"><a href="{{ url('/tasks') }}">Task List</a></li>
                             <li><img src="images/weathericon.png" width="28" height="28" alt="weather"><a href="{{ url('weather') }}">Weather</a></li>
                             <li><img src="images/exercise icon.png" width="28" height="28" alt="exercise"><a href="{{ url('exercise') }}">Workout</a></li>

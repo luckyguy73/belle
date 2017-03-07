@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
+
     <!-- Styles -->
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ elixir('css/style.css') }}">
@@ -71,7 +71,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="{{ url('/home') }}">Dashboard</a>
-                                </li> 
+                                </li>
 
                                 <li>
                                     <a href="{{ url('/logout') }}"
@@ -91,8 +91,19 @@
             </div>
         </div>
     </nav>
-        
-        
+        @if(session('success'))
+            <div class="alert alert-success alert-dismissable flash-message">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                {{ session('success') }}
+            </div>
+        @endif
+        @if(session('danger'))
+            <div class="alert alert-danger alert-dismissable flash-message">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                {{ session('danger') }}
+            </div>
+        @endif
+
         @yield('content')
     </div>
 
@@ -112,13 +123,16 @@
         $.ajax({
           method: "PUT",
           url: "tasks/" + item,
-          data: { as: as, item: item },   
+          data: { as: as, item: item },
         });
     });
-    </script>    
+    </script>
     <script>
         $(document).ready(function(){
             $("#new-task").focus();
+            setTimeout(function(){
+                $(".alert-dismissable").fadeOut("slow");
+            }, 3000 );
         });
     </script>
     <script>

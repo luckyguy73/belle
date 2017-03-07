@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('blogs', 'BlogController');
+
 Route::get('/weather', function () {
     return view('weather');
 });
@@ -27,11 +29,9 @@ Route::get('/exercise', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/login/{service}', 'Auth\SocialLoginController@redirect');
 Route::get('/login/{service}/callback', 'Auth\SocialLoginController@callback');
 
 $router->resource('tasks', 'TasksController');
-
-

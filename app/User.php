@@ -27,19 +27,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-    
+
     public function social()
     {
         return $this->hasMany(UserSocial::class);
     }
-    
+
     public function tasks()
     {
         return $this->hasMany(Task::class);
     }
-    
+
     public function hasSocialLinked($service)
     {
         return (bool) $this->social->where('service', $service)->count();
+    }
+
+    public function blogs()
+    {
+        return $this->hasMany('App\Blog');
     }
 }

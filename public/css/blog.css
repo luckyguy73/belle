@@ -1,0 +1,16 @@
+body {
+    background-image: url('/images/cloud.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.breadcrumb {
+    background: #fff;
+}
+
+.flash-message {
+    position: absolute;
+    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+}

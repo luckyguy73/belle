@@ -7,6 +7,10 @@
 @stop
 
 @section('content')
+    <ol class="breadcrumb col-md-6 col-md-offset-3">
+      <li><a href="{{ route('home') }}">Home</a></li>
+      <li class="active">Workout</li>
+    </ol>
     <div id='main' class="container-fluid">
         <div class="col-md-6 col-md-offset-3 panel panel-heading">
             <h1 class="panel-header">Workout App</h1>
@@ -56,13 +60,13 @@
                 @foreach($exercises as $exercise)
                 <div class="control-flow">
                    <p id="name{{ $loop->iteration }}" class="group{{ $exercise->group }} for-display ex-name">{{ ucwords($exercise->name) }}</p><br>
-                   
+
                    <p id="desc{{ $loop->iteration }}" class="group{{ $exercise->group }} for-display ex-desc">{{ ucwords($exercise->description) }}</p><br>
-                </div>   
+                </div>
                 @endforeach
             @endif
         </div>
-    </div>    
+    </div>
 @stop
 @section('scripts')
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -89,8 +93,8 @@ $(function() {
     //initialize pause button
     var isPaused = false;
     //initialize timer
-    var time = 60; 
-    
+    var time = 60;
+
     $( "#begin" ).click(function() {
         audio.play();
         exercise.innerHTML = document.getElementById("name1").innerHTML;
@@ -100,13 +104,13 @@ $(function() {
         $(".btn-danger").hide();
         time = 60;
         excCounter = 1;
-        startTimer();        
+        startTimer();
     }); //end of begin click function
-    
+
     $('#pause').on('click', function(e) {
         e.preventDefault();
         $(this).text(function(i, text){
-          isPaused === true ? isPaused = false : isPaused = true;  
+          isPaused === true ? isPaused = false : isPaused = true;
           return text === "Pause" ? "Resume" : "Pause";
         })
     });  //end of pause click function
@@ -115,7 +119,7 @@ $(function() {
 //        e.preventDefault();
 //        isPaused = false;
 //    });  //end of resume click function
-    
+
     $('#skip').on('click', function(e) {
         e.preventDefault();
         if(excCounter === excTotal / 2){
@@ -124,19 +128,19 @@ $(function() {
             nextExercise();
         }
     });  //end of skip click function
-    
+
     $('#back').on('click', function(e) {
         e.preventDefault();
         if(excCounter !== 1) {
             prevExercise();
         }
     });  //end of back click function
-    
+
     $('#exit').on('click', function(e) {
         e.preventDefault();
         modal.style.display = "none";
     });  //end of resume click function
-    
+
     function startTimer() {
         var t = window.setInterval(function() {
             if((time === 0) && (excCounter === excTotal / 2)) {
@@ -153,7 +157,7 @@ $(function() {
             }
         }, 1000);
     } //end of startTimer function
-    
+
     function nextExercise() {
         time = 60;
         excCounter += 1;
@@ -162,7 +166,7 @@ $(function() {
         modal.style.display = "block";
         audio.play();
     } //end of nextExercise function
-    
+
     function prevExercise() {
         time = 60;
         excCounter -= 1;
@@ -171,7 +175,7 @@ $(function() {
         modal.style.display = "block";
         audio.play();
     } //end of prevExercise function
-    
+
     function finished() {
         exercise.innerHTML = "Congratulations!!!  You have finished the Workout!!";
         desc.innerHTML = "Exercise is completed";
@@ -180,7 +184,7 @@ $(function() {
         $(".btn-primary").hide();
         $(".btn-danger").show();
     }  //end of finished function
-    
+
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         time = 0;
@@ -194,9 +198,8 @@ $(function() {
             excCounter = excTotal / 2;
         }
     }  //end of window onclick function
-    
-}); //end of ready function   
-    
+
+}); //end of ready function
+
 </script>
 @stop
-	

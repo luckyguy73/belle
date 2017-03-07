@@ -20,6 +20,7 @@ elixir(mix => {
        'css/exercise.css',
        'css/getweather.css',
        'css/style.css',
+       'css/blog.css',
        'js/app.js',
        'js/getweather.js'
        ])

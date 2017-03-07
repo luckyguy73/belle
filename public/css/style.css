@@ -3,6 +3,10 @@ body {
     font-family: montserrat;
 }
 
+.breadcrumb {
+    background: #fff;
+}
+
 #weather-id, #mcweather {
     color: #636b6f;
     font-family: montserrat;
@@ -77,7 +81,7 @@ body {
 #apps li {
     list-style: none;
     position: relative;
-    
+
 }
 #lynx {
     float: right;

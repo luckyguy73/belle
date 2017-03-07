@@ -1,8 +1,9 @@
 {
-  "css/app.css": "css/app-409c67dad2.css",
-  "css/exercise.css": "css/exercise-51ac6c237f.css",
+  "css/app.css": "css/app-86ff5d31a2.css",
+  "css/blog.css": "css/blog-c3bdcb9785.css",
+  "css/exercise.css": "css/exercise-7199f84346.css",
   "css/getweather.css": "css/getweather-472715bb5a.css",
-  "css/style.css": "css/style-a66334774c.css",
-  "js/app.js": "js/app-bd98939452.js",
+  "css/style.css": "css/style-bfa94a6db4.css",
+  "js/app.js": "js/app-4307ce6c31.js",
   "js/getweather.js": "js/getweather-6bdf217c06.js"
 }

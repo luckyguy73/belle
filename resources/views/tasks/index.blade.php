@@ -6,6 +6,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+            <ol class="breadcrumb">
+              <li><a href="{{ route('home') }}">Home</a></li>
+              <li class="active">Tasks</li>
+            </ol>
             <div class="panel panel-default list">
                 <div class="panel-heading header">{{ $pname }}'s Task List</div>
 
@@ -24,13 +28,13 @@
                         @endforeach
                     </ul>
                     {!! Form::open(['action' => 'TasksController@store', 'class' => 'item-add']) !!}
-                        
+
                         {!! Form::text('task_name', null, ['placeholder' => 'Add new task', 'id' => 'new-task', 'autocomplete' => 'off', 'class' => 'input']) !!}
-                        
+
                         {!! Form::submit('Add', ['class' => 'submit']) !!}
-                        
+
                     {!! Form::close() !!}
-                    
+
                     @if($errors->any())
                         <ul class="alert alert-danger">
                             @foreach($errors->all() as $error)

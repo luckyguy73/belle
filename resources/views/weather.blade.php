@@ -6,6 +6,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+            <ol class="breadcrumb">
+              <li><a href="{{ route('home') }}">Home</a></li>
+              <li class="active">Weather</li>
+            </ol>
             <div class="panel panel-default list">
                 <div id="weather-id" class="panel-heading header">Current Weather in your City</div>
 
@@ -28,9 +32,9 @@
 @section('scripts')
 <script>
     var Request1 = false;
-    var f = 0;    
+    var f = 0;
     Request1 = new XMLHttpRequest();
-    
+
     if (Request1) {
         var weather = document.getElementById("weather");
         var zip = prompt("Please enter your zipcode", 90210);
@@ -41,22 +45,22 @@
                 var json = JSON.parse(Request1.responseText);
                 if (json.cod == "404")
                     weather.innerHTML = "Weather not Found for that zipcode.  Please try again.";
-                
-                document.getElementById("city").innerHTML =  json.name + ", " + json.sys.country + " " + zip; 
+
+                document.getElementById("city").innerHTML =  json.name + ", " + json.sys.country + " " + zip;
                 document.getElementById("desc").innerHTML =  json.weather[0].description + "<img id='icon'>";
                 document.getElementById("temp").innerHTML =  Math.round(json.main.temp) + "&#8457;";
                 f = Math.round(json.main.temp);
                 document.getElementById("icon").src =  "http://openweathermap.org/img/w/" + json.weather[0].icon  + ".png";
             }
         }
-        
-        Request1.send();       
+
+        Request1.send();
     }
     function chgZip() {
         history.go(0);
     }
 
-    var count = 1;    
+    var count = 1;
     function convert() {
         if (count % 2 == 0) {
             document.getElementById("temp").innerHTML =  f + "&#8457;";
@@ -66,5 +70,5 @@
         }
         count++;
     }
-</script>    
+</script>
 @stop
