@@ -23,12 +23,22 @@
                     </div>
                     <div id="apps">
                         <ul>
-                            <li><img src="images/aml.png" width="28" height="28" alt="classifieds"><a href="{{ url('http://ashton.ml') }}" target="_blank">AshtonMorgan | Listings</a></li>
-                            <li><img src="images/blog.jpg" width="28" height="28" alt="blog posts"><a href="{{ route('blogs.index') }}">Blog Posts</a></li>
-                            <li><img src="images/games.png" width="28" height="28" alt="games"><a href="{{ url('/games') }}">Javascript Games</a></li>
-                            <li><img src="images/task list.png" width="28" height="28" alt="task list"><a href="{{ url('/tasks') }}">Task List</a></li>
-                            <li><img src="images/weathericon.png" width="28" height="28" alt="weather"><a href="{{ url('weather') }}">Weather</a></li>
-                            <li><img src="images/exercise icon.png" width="28" height="28" alt="exercise"><a href="{{ url('exercise') }}">Workout</a></li>
+                            <li><img src="images/aml.png" width="28" height="28" 
+                                alt="classifieds"><a href="{{ url('http://ashton.ml') }}" 
+                                target="_blank">AshtonMorgan | Listings</a></li>
+                            <li><img src="images/blog.jpg" width="28" height="28" 
+                                alt="blog posts"><a 
+                                href="{{ route('blogs.index') }}">Blog Posts</a></li>
+                            <li><img src="images/chef.png" width="28" height="28" alt="recipes"><a
+                                href="{{ url('http://belle-moda.gq') }}" 
+                                target="_blank">Delish Recipes</a></li>
+                            <li><img src="images/games.png" width="28" height="28" alt="games"><a href  ="{{ url('/games') }}">Javascript Games</a></li>
+                            <li><img src="images/task list.png" width="28" height="28" 
+                                alt="task list"><a href="{{ url('/tasks') }}">Task List</a></li>
+                            <li><img src="images/weathericon.png" width="28" height="28" 
+                                alt="weather"><a href="{{ url('weather') }}">Weather</a></li>
+                            <li><img src="images/exercise icon.png" width="28" height="28" 
+                                alt="exercise"><a href="{{ url('exercise') }}">Workout</a></li>
                         </ul>
                     </div>
                 </div>
