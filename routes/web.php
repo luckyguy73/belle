@@ -21,6 +21,18 @@ Route::get('/weather', function () {
     return view('weather');
 });
 
+Route::get('/games', function () {
+    return view('games.index');
+});
+
+Route::get('/games/typing', function () {
+    return view('games.typing');
+})->name('games.typing');
+
+Route::get('/games/rock-paper-scissors', function () {
+    return view('games.rock-paper-scissors');
+})->name('games.rock-paper-scissors');
+
 Route::post('/exercise', 'ExercisesController@index');
 
 Route::get('/exercise', function () {

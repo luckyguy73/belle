@@ -1,0 +1,1 @@
+Darkness cannot drive out darkness; only light can do that, and hate cannot drive out hate; only love can do that.

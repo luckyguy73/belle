@@ -7,13 +7,15 @@
 @stop
 
 @section('content')
-    <ol class="breadcrumb col-md-6 col-md-offset-3">
-      <li><a href="{{ route('home') }}">Home</a></li>
-      <li class="active">Workout</li>
-    </ol>
     <div id='main' class="container-fluid">
-        <div class="col-md-6 col-md-offset-3 panel panel-heading">
-            <h1 class="panel-header">Workout App</h1>
+        <ol class="breadcrumb col-md-6 col-md-offset-3 text-left">
+          <li><a href="{{ route('home') }}">Home</a></li>
+          <li class="active">Workout</li>
+        </ol>
+        <div class="col-md-6 col-md-offset-3 panel panel-default">
+            <div class="panel-heading">
+                <h1>Workout App</h1>
+            </div>
             <form action="" method="post" class="form-inline panel-body">
                {{ csrf_field() }}
                 <Select NAME="type" class="custom-select">

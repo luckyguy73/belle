@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb list">
               <li><a href="{{ route('home') }}">Home</a></li>
               <li class="active">Weather</li>
             </ol>
