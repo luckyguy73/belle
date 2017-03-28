@@ -31,7 +31,7 @@
                                 alt="blog posts"><a 
                                 href="{{ route('blogs.index') }}">Blog Posts</a></li>
                             <li><img src="images/chef.png" width="28" height="28" alt="recipes"><a
-                                href="{{ url('http://belle-moda.gq') }}" 
+                                href="{{ url('https://belle-moda.herokuapp.com/') }}" 
                                 target="_blank">Delish Recipes</a></li>
                             <li><img src="images/games.png" width="28" height="28" alt="games"><a href  ="{{ url('/games') }}">Javascript Games</a></li>
                             <li><img src="images/task list.png" width="28" height="28" 
