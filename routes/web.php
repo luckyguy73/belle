@@ -25,6 +25,14 @@ Route::get('/games', function () {
     return view('games.index');
 });
 
+Route::get('/games/ask', function () {
+    return view('games.ask');
+})->name('games.ask');
+
+Route::get('/games/codebreaker', function () {
+    return view('games.codebreaker');
+})->name('games.codebreaker');
+
 Route::get('/games/typing', function () {
     return view('games.typing');
 })->name('games.typing');
