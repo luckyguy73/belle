@@ -30,6 +30,7 @@
      <div class="col-sm-8 col-sm-offset-2 panel panel-default">
         <ol class="breadcrumb">
           <li><a href="{{ route('home') }}">Home</a></li>
+          <li><a href="{{ route('games.index') }}">Javascript Games</a></li>
           <li class="active">Code breaker</li>
         </ol>
         <div class="panel-heading text-center">

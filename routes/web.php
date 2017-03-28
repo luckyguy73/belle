@@ -23,7 +23,7 @@ Route::get('/weather', function () {
 
 Route::get('/games', function () {
     return view('games.index');
-});
+})->name('games.index');
 
 Route::get('/games/ask', function () {
     return view('games.ask');

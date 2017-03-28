@@ -15,6 +15,7 @@
   <div class="col-sm-8 col-sm-offset-2 panel panel-default">
     <ol class="breadcrumb">
       <li><a href="{{ route('home') }}">Home</a></li>
+      <li><a href="{{ route('games.index') }}">Javascript Games</a></li>
       <li class="active">Typing Test</li>
     </ol>
     <h1 style = "color:blue">Typing Test Challenge</h1>
