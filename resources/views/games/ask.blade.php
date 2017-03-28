@@ -15,7 +15,7 @@
         <input v-model="question">
       </p>
       <h2>@{{ answer }}</h2>
-      <img :src="imagePath">
+      <img class="img-responsive" :src="imagePath">
       
     </div>
   </div>
