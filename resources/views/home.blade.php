@@ -24,7 +24,8 @@
                     <div id="apps">
                         <ul>
                             <li><img src="images/aml.png" width="28" height="28" 
-                                alt="classifieds"><a href="{{ url('http://ashton.ml') }}" 
+                                alt="classifieds"><a 
+                                href="{{ url('https://murmuring-springs-26290.herokuapp.com/') }}" 
                                 target="_blank">AshtonMorgan | Listings</a></li>
                             <li><img src="images/blog.jpg" width="28" height="28" 
                                 alt="blog posts"><a 
