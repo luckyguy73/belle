@@ -30,7 +30,7 @@
      <div class="col-sm-8 col-sm-offset-2 panel panel-default">
         <ol class="breadcrumb">
           <li><a href="{{ route('home') }}">Home</a></li>
-          <li class="active">Typing Test</li>
+          <li class="active">Code breaker</li>
         </ol>
         <div class="panel-heading text-center">
             <h1>Code Breaker</h1>
@@ -73,7 +73,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">Codebreaker Instructions</h4>
+            <h4 class="modal-title" id="myModalLabel">Code breaker Instructions</h4>
           </div>
           <div class="modal-body">
                <h2>Objective:</h2>
