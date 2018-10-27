@@ -95,7 +95,7 @@ $(function() {
     //initialize pause button
     var isPaused = false;
     //initialize timer
-    var time = 60;
+    var time = 30;
 
     $( "#begin" ).click(function() {
         audio.play();
@@ -104,7 +104,7 @@ $(function() {
         modal.style.display = "block";
         $(".btn-primary").show();
         $(".btn-danger").hide();
-        time = 60;
+        time = 30;
         excCounter = 1;
         startTimer();
     }); //end of begin click function
@@ -161,7 +161,7 @@ $(function() {
     } //end of startTimer function
 
     function nextExercise() {
-        time = 60;
+        time = 30;
         excCounter += 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
         desc.innerHTML = document.getElementById("desc" + excCounter).innerHTML;
@@ -170,7 +170,7 @@ $(function() {
     } //end of nextExercise function
 
     function prevExercise() {
-        time = 60;
+        time = 30;
         excCounter -= 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
         desc.innerHTML = document.getElementById("desc" + excCounter).innerHTML;
