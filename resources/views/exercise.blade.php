@@ -94,8 +94,10 @@ $(function() {
     var output = $('#timer');
     //initialize pause button
     var isPaused = false;
+    //get type
+    var type = {!! json_encode($type) !!};
     //initialize timer
-    var time = 30;
+    var time = (type = "Cardio" ? 30 : 60);
 
     $( "#begin" ).click(function() {
         audio.play();
