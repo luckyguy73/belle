@@ -104,7 +104,7 @@ $(function() {
         modal.style.display = "block";
         $(".btn-primary").show();
         $(".btn-danger").hide();
-        let type = $("#extype").text
+        let type = $("#extype").text();
         time = (type = "cardio") ? 30 : basetime;
         excCounter = 1;
         startTimer();
@@ -162,7 +162,7 @@ $(function() {
     } //end of startTimer function
 
     function nextExercise() {
-        let type = $("#extype").text
+        let type = $("#extype").text();
         time = (type = "cardio") ? 30 : basetime;
         excCounter += 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
