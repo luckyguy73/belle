@@ -105,7 +105,7 @@ $(function() {
         $(".btn-primary").show();
         $(".btn-danger").hide();
         let type = $("#extype").text();
-        time = (type == "cardio") ? 30 : basetime;
+        time = (type == "Cardio") ? 30 : basetime;
         excCounter = 1;
         startTimer();
     }); //end of begin click function
@@ -163,7 +163,7 @@ $(function() {
 
     function nextExercise() {
         let type = $("#extype").text();
-        time = (type == "cardio") ? 30 : basetime;
+        time = (type == "Cardio") ? 30 : basetime;
         excCounter += 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
         desc.innerHTML = document.getElementById("desc" + excCounter).innerHTML;
@@ -173,7 +173,7 @@ $(function() {
 
     function prevExercise() {
         let type = $("#extype").text();
-        time = (type == "cardio") ? 30 : basetime;
+        time = (type == "Cardio") ? 30 : basetime;
         excCounter -= 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
         desc.innerHTML = document.getElementById("desc" + excCounter).innerHTML;
