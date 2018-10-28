@@ -96,7 +96,7 @@ $(function() {
     var isPaused = false;
     //get type
     @if(isset($type))
-        var type = {{ $type }};
+        var type = {!! json_encode($type) !!};
         //initialize timer
         var basetime = (type = "Cardio") ? 30 : 60;
     @endif
