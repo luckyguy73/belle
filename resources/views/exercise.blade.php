@@ -55,7 +55,7 @@
                         <div class="panel-body">
                         <h2>Get Ready to Sweat!</h2>
                         <h4>This app will cycle thru your selected workout routine and signal you when you need to start the next exercise.  Start to get loose, the 1st exercise is coming right up!</h4>
-                        <h2><?= ucwords($type)?></h2>
+                        <h2 id="extype"><?= ucwords($type)?></h2>
                         <button type="button" id="begin" class="btn btn-success" >Begin</button><br>
                     </div>
                 </div>
@@ -104,9 +104,7 @@ $(function() {
         modal.style.display = "block";
         $(".btn-primary").show();
         $(".btn-danger").hide();
-        @if(isset($type))
-            let type = {!! json_encode($type) !!};
-        @endif
+        let type = $("#extype").text
         time = (type = "cardio") ? 30 : basetime;
         excCounter = 1;
         startTimer();
@@ -164,6 +162,7 @@ $(function() {
     } //end of startTimer function
 
     function nextExercise() {
+        let type = $("#extype").text
         time = (type = "cardio") ? 30 : basetime;
         excCounter += 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
@@ -173,6 +172,7 @@ $(function() {
     } //end of nextExercise function
 
     function prevExercise() {
+        let type = $("#extype").text
         time = (type = "cardio") ? 30 : basetime;
         excCounter -= 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
