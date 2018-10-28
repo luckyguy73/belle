@@ -95,9 +95,9 @@ $(function() {
     //initialize pause button
     var isPaused = false;
     //get type
-    var type = {!! json_encode($type) !!};
+    var type = {{ $type }};
     //initialize timer
-    var time = (type = "Cardio") ? 30 : 60;
+    var basetime = (type = "Cardio") ? 30 : 60;
 
     $( "#begin" ).click(function() {
         audio.play();
@@ -106,7 +106,7 @@ $(function() {
         modal.style.display = "block";
         $(".btn-primary").show();
         $(".btn-danger").hide();
-        time = 30;
+        time = basetime;
         excCounter = 1;
         startTimer();
     }); //end of begin click function
@@ -163,7 +163,7 @@ $(function() {
     } //end of startTimer function
 
     function nextExercise() {
-        time = 30;
+        time = basetime;
         excCounter += 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
         desc.innerHTML = document.getElementById("desc" + excCounter).innerHTML;
@@ -172,7 +172,7 @@ $(function() {
     } //end of nextExercise function
 
     function prevExercise() {
-        time = 30;
+        time = basetime;
         excCounter -= 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
         desc.innerHTML = document.getElementById("desc" + excCounter).innerHTML;
