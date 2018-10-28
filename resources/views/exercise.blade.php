@@ -97,7 +97,7 @@ $(function() {
     //get type
     var type = {!! json_encode($type) !!};
     //initialize timer
-    var time = (type = "Cardio" ? 30 : 60);
+    var time = (type = "Cardio") ? 30 : 60;
 
     $( "#begin" ).click(function() {
         audio.play();
