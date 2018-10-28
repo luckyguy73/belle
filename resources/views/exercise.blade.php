@@ -95,10 +95,11 @@ $(function() {
     //initialize pause button
     var isPaused = false;
     //get type
-    var type = {{ $type }};
-    //initialize timer
-    var basetime = (type = "Cardio") ? 30 : 60;
-
+    @if(isset($type))
+        var type = {{ $type }};
+        //initialize timer
+        var basetime = (type = "Cardio") ? 30 : 60;
+    @endif
     $( "#begin" ).click(function() {
         audio.play();
         exercise.innerHTML = document.getElementById("name1").innerHTML;
