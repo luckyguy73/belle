@@ -98,7 +98,7 @@ $(function() {
     @if(isset($type))
         var type = {!! json_encode($type) !!};
         //initialize timer
-        var basetime = (type = "Cardio") ? 30 : 60;
+        var basetime = (type = "cardio") ? 30 : 60;
     @endif
     $( "#begin" ).click(function() {
         audio.play();
