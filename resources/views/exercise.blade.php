@@ -172,7 +172,7 @@ $(function() {
     } //end of nextExercise function
 
     function prevExercise() {
-        let type = $("#extype").text
+        let type = $("#extype").text();
         time = (type = "cardio") ? 30 : basetime;
         excCounter -= 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
