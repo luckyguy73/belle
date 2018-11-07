@@ -21,7 +21,9 @@
                 <Select NAME="type" class="custom-select">
                     <Option selected disabled>Choose routine</Option>
                     <Option VALUE="cardio">Cardio</Option>
+                    <Option VALUE="cardio max">Cardio Max</Option>
                     <Option VALUE="circuit">Circuit</Option>
+                    <Option VALUE="circuit max">Circuit Max</Option>
                     <Option VALUE="abs">Abs</Option>
                     <Option VALUE="stretch">Stretch</Option>
                 </Select>
@@ -105,7 +107,7 @@ $(function() {
         $(".btn-primary").show();
         $(".btn-danger").hide();
         let type = $("#extype").text();
-        time = (type == "Cardio") ? 30 : basetime;
+        time = (type == "Cardio" || type == "Cardio Max") ? 30 : basetime;
         excCounter = 1;
         startTimer();
     }); //end of begin click function
@@ -163,7 +165,7 @@ $(function() {
 
     function nextExercise() {
         let type = $("#extype").text();
-        time = (type == "Cardio") ? 30 : basetime;
+        time = (type == "Cardio" || type == "Cardio Max") ? 30 : basetime;
         excCounter += 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
         desc.innerHTML = document.getElementById("desc" + excCounter).innerHTML;
@@ -173,7 +175,7 @@ $(function() {
 
     function prevExercise() {
         let type = $("#extype").text();
-        time = (type == "Cardio") ? 30 : basetime;
+        time = (type == "Cardio" || type == "Cardio Max") ? 30 : basetime;
         excCounter -= 1;
         exercise.innerHTML = document.getElementById("name" + excCounter).innerHTML;
         desc.innerHTML = document.getElementById("desc" + excCounter).innerHTML;
