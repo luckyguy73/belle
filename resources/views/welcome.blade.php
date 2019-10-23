@@ -143,6 +143,7 @@
                     </div>
                 <div class="title .m-b-md">
                     {{ config('app.name', 'Belle Moda') }}
+                    {{ phpversion() }}
                 </div>
                 <form class="form-inline" method="get" action="https://www.google.com/search"
                    target="_blank" _lpchecked="1">
