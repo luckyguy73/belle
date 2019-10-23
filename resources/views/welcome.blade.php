@@ -120,8 +120,8 @@
                         <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/005/518/original/DSC_0082.mp4" class="" style="opacity: .7;"></video>
 
                         @elseif ($rand === 4)
-                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/013/479/original/Water_59_-_30s_-_4k_res.mp4" class="" style="opacity: .7;"></video>
-
+                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/033/826/original/pattaya-aerial-view30.mp4" class="" style="opacity: .7;"></video>
+                        
                         @elseif ($rand === 5)
                         <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/004/927/original/Snowflakes_Falling_Motion_Background_4K.mp4" class="" style="opacity: .7;"></video>
                         
@@ -138,7 +138,7 @@
                         <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/012/392/original/Water_19_-_60s_-_4k_res.mp4" class="" style="opacity: .7;"></video>
                         
                         @else
-                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/033/826/original/pattaya-aerial-view30.mp4" class="" style="opacity: .7;"></video>
+                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/013/479/original/Water_59_-_30s_-_4k_res.mp4" class="" style="opacity: .7;"></video>
                         @endif
                     </div>
                 <div class="title .m-b-md">
