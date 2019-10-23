@@ -114,13 +114,13 @@
                         <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/004/053/original/Beatiful_rocks_in_the_beach.mp4" class="" style="opacity: .7;"></video>
 
                         @elseif ($rand === 2)
-                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/002/302/original/storm-clouds-timelapse.mp4" class="" style="opacity: .7;"></video>
+                        <video muted autoplay loop src="https://cdn.videvo.net/videvo_files/converted/2014_11/preview/GOSTI_OBLAKI.mp443881.webm" class="" style="opacity: .7;"></video>
 
                         @elseif ($rand === 3)
-                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/000/212/original/Beach%20rocks%20at%20dusk%20[SaveYouTube.com].mp4" class="" style="opacity: .7;"></video>
+                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/005/518/original/DSC_0082.mp4" class="" style="opacity: .7;"></video>
 
                         @elseif ($rand === 4)
-                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/002/725/original/clouds-over-field.mp4" class="" style="opacity: .7;"></video>
+                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/013/479/original/Water_59_-_30s_-_4k_res.mp4" class="" style="opacity: .7;"></video>
 
                         @elseif ($rand === 5)
                         <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/004/927/original/Snowflakes_Falling_Motion_Background_4K.mp4" class="" style="opacity: .7;"></video>
@@ -135,15 +135,14 @@
                         <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/004/052/original/Beach_Rocks___Blue_Ocean.mp4" class="" style="opacity: .7;"></video>
                         
                         @elseif ($rand === 9)
-                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/003/303/original/Flying_over_Snow_Covered_Mountains_Free_HD_Video.mp4" class="" style="opacity: .7;"></video>
+                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/012/392/original/Water_19_-_60s_-_4k_res.mp4" class="" style="opacity: .7;"></video>
                         
                         @else
-                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/002/403/original/storm-raindrops-on-window.mp4" class="" style="opacity: .7;"></video>
+                        <video muted autoplay loop src="https://static.videezy.com/system/resources/previews/000/033/826/original/pattaya-aerial-view30.mp4" class="" style="opacity: .7;"></video>
                         @endif
                     </div>
                 <div class="title .m-b-md">
                     {{ config('app.name', 'Belle Moda') }}
-                    {{ phpversion() }}
                 </div>
                 <form class="form-inline" method="get" action="https://www.google.com/search"
                    target="_blank" _lpchecked="1">
