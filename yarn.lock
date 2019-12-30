@@ -2381,8 +2381,8 @@ lru-cache@^4.0.1:
     yallist "^2.0.0"
 
 macaddress@^0.2.8:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/macaddress/-/macaddress-0.2.8.tgz#5904dc537c39ec6dbefeae902327135fa8511f12"
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/macaddress/-/macaddress-0.2.9.tgz#3579b8b9acd5b96b4553abf0f394185a86813cb3"
 
 magic-string@^0.14.0:
   version "0.14.0"
@@ -4054,10 +4054,6 @@ vue-loader@^9.3.2:
     vue-template-compiler "^2.0.0-rc.3"
     vue-template-es2015-compiler "^1.0.0"
 
-vue-resource@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vue-resource/-/vue-resource-1.0.3.tgz#8d52d0d8a9ed5f2ae704c68d530c84ceaf97be14"
-
 vue-style-loader@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-1.0.0.tgz#abeb7bd0f46313083741244d3079d4f14449e049"
@@ -4074,10 +4070,6 @@ vue-template-compiler@^2.0.0-rc.3:
 vue-template-es2015-compiler@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.0.0.tgz#89add11c41224059c839ef0b9484e97a7f98abc5"
-
-vue@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.2.1.tgz#ddbfd2f0caf38f374f5a36eea2e1edf25225b68e"
 
 watchpack@^0.2.1:
   version "0.2.9"
