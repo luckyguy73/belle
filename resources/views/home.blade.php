@@ -23,6 +23,8 @@
                     </div>
                     <div id="apps">
                         <ul>
+                            <li><img src="images/resume.png" width="28" height="28"
+                                     alt="resume"><a href="images/resume.pdf" title="resume" target="_blank">Ian De Bie resume</a></li>
                             <li><img src="images/aml.png" width="28" height="28" 
                                 alt="classifieds"><a 
                                 href="{{ url('https://murmuring-springs-26290.herokuapp.com/') }}" 
@@ -31,7 +33,7 @@
                                 alt="blog posts"><a 
                                 href="{{ route('blogs.index') }}">Blog Posts</a></li>
                             <li><img src="images/chef.png" width="28" height="28" alt="recipes"><a
-                                href="{{ url('https://belle-moda.herokuapp.com/') }}" 
+                                href="{{ url('https://delish-recipes.herokuapp.com/') }}" 
                                 target="_blank">Delish Recipes</a></li>
                             <li><img src="images/games.png" width="28" height="28" alt="games"><a href  ="{{ url('/games') }}">Javascript Games</a></li>
                             <li><img src="images/task list.png" width="28" height="28" 
