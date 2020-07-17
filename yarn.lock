@@ -2340,9 +2340,9 @@ lodash@4.11.2:
   version "4.11.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.11.2.tgz#d6b4338b110a58e21dae5cebcfdbbfd2bc4cdb3b"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.2, lodash@^4.3.0:
-  version "4.16.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.4.tgz#01ce306b9bad1319f2a5528674f88297aeb70127"
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.19, lodash@^4.3.0:
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
 
 lodash@~1.0.1:
   version "1.0.2"
@@ -4054,10 +4054,6 @@ vue-loader@^9.3.2:
     vue-template-compiler "^2.0.0-rc.3"
     vue-template-es2015-compiler "^1.0.0"
 
-vue-resource@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vue-resource/-/vue-resource-1.0.3.tgz#8d52d0d8a9ed5f2ae704c68d530c84ceaf97be14"
-
 vue-style-loader@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-1.0.0.tgz#abeb7bd0f46313083741244d3079d4f14449e049"
@@ -4074,10 +4070,6 @@ vue-template-compiler@^2.0.0-rc.3:
 vue-template-es2015-compiler@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.0.0.tgz#89add11c41224059c839ef0b9484e97a7f98abc5"
-
-vue@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.2.1.tgz#ddbfd2f0caf38f374f5a36eea2e1edf25225b68e"
 
 watchpack@^0.2.1:
   version "0.2.9"
